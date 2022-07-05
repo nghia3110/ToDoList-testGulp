@@ -1,0 +1,117 @@
+@media screen and (min-width: 769px) {
+  html {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+  }
+  a:hover {
+    opacity: 0.5;
+  }
+  .main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #152b36;
+    color: #fff;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    flex: 20%;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: center;
+    border-right: 1px solid #888;
+  }
+  .left li {
+    margin: 20px;
+    padding: 5px;
+  }
+  .left li a {
+    display: flex;
+    padding-left: 60px;
+    align-items: center;
+    gap: 20px;
+  }
+  .right {
+    flex: 80%;
+    padding-left: 50px;
+  }
+  .icon-list-top {
+    margin-top: 25px;
+    flex: 40%;
+  }
+  .icon-list-top .home {
+    opacity: 0.5;
+  }
+  .icon-list-bottom {
+    padding-top: 150px;
+    flex: 60%;
+  }
+  .header {
+    margin-bottom: 40px;
+    padding-top: 15px;
+  }
+  .header .title {
+    display: none;
+  }
+  .header .search {
+    background-color: #4a595e;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  .header .search-bar::placeholder {
+    color: #fff;
+  }
+  .header #menu-btn {
+    display: none;
+  }
+  .search .search-icon {
+    margin-left: 10px;
+  }
+  .search .search-bar {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a595e;
+    color: #fff;
+    outline: none;
+  }
+  .content .task-list .task-item {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .content .task-list .task-item .task-content {
+    flex: 0 0 95%;
+  }
+  .content .task-list .task-item .delete-btn {
+    flex: 0 0 5%;
+  }
+  #add-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0px;
+  }
+  #add-modal .modal-content {
+    color: #000;
+    background-color: #fefefe;
+    width: 40%;
+    margin-top: 15%;
+    margin-left: 30%;
+    border: 1px solid #888;
+  }
+}

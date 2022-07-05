@@ -1,0 +1,130 @@
+<div id="add-modal">
+        <div class="modal-content">
+            <div class="input">
+                <input type="text" id="input-task" placeholder="Enter your task">
+            </div>
+            <button id="accept-btn">Save</button>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <div class="sidebar-content">
+            <h3 class="sidebar-title">Menu</h3>
+            <ul class="icon-list-top">
+                <li class="home"><a href="#">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="search"><a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search
+                    </a>
+                </li>
+                <li class="calendar"><a href="#">
+                        <i class="fa-solid fa-calendar"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li class="folder"><a href="#">
+                        <i class="fa-solid fa-folder"></i>
+                        Folder
+                    </a>
+                </li>
+                <li class="trash-bin"><a href="#">
+                        <i class="fa-solid fa-trash"></i>
+                        Trash
+                    </a>
+                </li>
+                <li class="backup"><a href="#">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Backup
+                    </a>
+                </li>
+            </ul>
+            <ul class="icon-list-bottom">
+                <li class="setting"><a href="#">
+                        <i class="fa-solid fa-gear icon"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="about"><a href="#">
+                        <i class="fa-solid fa-circle-info icon"></i>
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <span style="font-size: 20px;
+            font-weight: 300;">To Do List</span>
+            <ul class="icon-list-top">
+                <li class="home"><a href="#">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="calendar"><a href="#">
+                        <i class="fa-solid fa-calendar"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li class="folder"><a href="#">
+                        <i class="fa-solid fa-folder"></i>
+                        Folder
+                    </a>
+                </li>
+                <li class="trash-bin"><a href="#">
+                        <i class="fa-solid fa-trash"></i>
+                        Trash
+                    </a>
+                </li>
+                <li class="backup"><a href="#">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Backup
+                    </a>
+                </li>
+            </ul>
+            <ul class="icon-list-bottom">
+                <li class="setting"><a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        Setting
+                    </a>
+                </li>
+                <li class="about"><a href="#">
+                        <i class="fa-solid fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="header">
+                <span class="title">To Do List</span>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="search-bar" placeholder="Search">
+                </div>
+                <button id="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+
+            <div class="content">
+                <div class="doing">
+                    <h4>Doing</h4>
+                    <ul id="task-list-doing" class="task-list"></ul>
+                </div>
+                <div class="completed">
+                    <h4>Completed</h4>
+                    <ul id="task-list-completed" class="task-list" style="height: 180px;"></ul>
+                </div>
+
+                <div class="footer">
+                    <button id="add-btn" class="add-task"><i class="fa-thin fa-plus add-icon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>

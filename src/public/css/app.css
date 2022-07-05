@@ -1,0 +1,253 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+li {
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.header {
+  background-color: #152b36;
+  margin-bottom: 10px;
+  position: relative;
+}
+.header .title {
+  font-size: 20px;
+  font-weight: 300;
+}
+.header #menu-btn {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  background-color: #152b36;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.header #menu-btn:hover {
+  opacity: 0.6;
+}
+
+.content .task-list {
+  overflow: scroll;
+  height: 220px;
+}
+.content .task-list .task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #4a595e;
+  border-radius: 5px;
+}
+.content .task-list .task-item:hover {
+  opacity: 0.8;
+}
+.content .task-list .task-item .task-content {
+  flex: 0 0 85%;
+}
+.content .task-list .task-item .delete-btn {
+  flex: 0 0 15%;
+  border: none;
+  font-size: 15px;
+  background-color: #4a595e;
+  color: #fff;
+  cursor: pointer;
+}
+
+#task-list-completed label {
+  text-decoration: line-through;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+
+input[type=checkbox] + label:before {
+  content: "✔";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  background-color: #152b36;
+}
+.footer .add-task {
+  padding: 10px 16px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1fe3b1;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer .add-task:hover {
+  opacity: 0.6;
+}
+
+#add-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  width: 280px;
+  height: 593px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+#add-modal .modal-content {
+  color: #000;
+  background-color: #fefefe;
+  margin-top: 80%;
+  margin-left: 28px;
+  border: 1px solid #888;
+  width: 80%;
+  position: relative;
+}
+#add-modal .modal-content .input {
+  padding: 10px;
+  background-color: #273e38;
+}
+#add-modal .modal-content .input #input-task {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  outline: none;
+  background-color: #273e38;
+  border-bottom: 1px solid #307f69;
+  color: #fff;
+}
+#add-modal .modal-content .input #input-task::placeholder {
+  color: #fff;
+}
+
+#accept-btn {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+
+#sidebar {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  width: 280px;
+  height: 593px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 70%;
+  height: 100%;
+  background-color: #1fe3b1;
+  animation: click-animate ease 0.5s;
+}
+.sidebar-content .sidebar-title {
+  font-size: 20px;
+  font-weight: 200;
+  padding: 10px 20px;
+}
+.sidebar-content .icon-list-top {
+  flex: 40%;
+}
+.sidebar-content li {
+  padding: 5px;
+  margin: 20px;
+}
+.sidebar-content li > a:hover {
+  opacity: 0.5;
+}
+.sidebar-content a {
+  color: #000;
+  font-size: 15px;
+  text-decoration: none;
+}
+.sidebar-content a > i {
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background: linear-gradient(145.44deg, #F2F4FA 0%, #FAFBFC 100%);
+  }
+  .main {
+    padding: 15px;
+    width: 280px;
+    border-radius: 20px;
+    background-color: #152b36;
+    color: #fff;
+  }
+  .left {
+    display: none;
+  }
+  .right .search-bar {
+    display: none;
+  }
+  .right .search-icon {
+    display: none;
+  }
+}
